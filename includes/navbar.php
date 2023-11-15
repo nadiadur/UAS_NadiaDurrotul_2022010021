@@ -22,7 +22,11 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">My Profile</a></li>
-            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+            <li>
+          <form action="allcode.php" method="POST">
+            <button type="submit" name="logout.btn" class="dropdown-item">Logout</button>
+          </form>
+          </li>
            
           </ul>
         </li>

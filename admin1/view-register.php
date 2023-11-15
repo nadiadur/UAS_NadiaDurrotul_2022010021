@@ -58,8 +58,11 @@ include('includes/header.php');
                                     }
                                     ?>
                                 </td>
+                                
                                  <td><a href="register-edit.php?id=<?=$row['id'];?>" class="btn btn-success">Edit</a></td>
-                                 <td><button type="button" class="btn btn-success">Delete</button></td>
+                                 <form action="code.php" method="POST">
+                                 <td><button type="submit" name="user_delete" value="<?= $row['id'];?>" class="btn btn-danger">Delete</button></td>
+                                 </form>
                             </tr>
                             <?php
                         }

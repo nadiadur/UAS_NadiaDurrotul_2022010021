@@ -9,8 +9,9 @@ include('includes/header.php');
      <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4>Add User/Admin</h4>
+                <h4>Add User/Admin
                 <a href="view-register.php" class="btn btn-danger float-end">BACK</a>
+                </h4>
             </div>
             <div class="card-body">
 

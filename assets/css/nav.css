@@ -1,0 +1,7 @@
+.navbar-brand img {
+    width: 200px; /* Ubah lebar gambar sesuai kebutuhan Anda */
+    height: auto; /* Biarkan tinggi otomatis sesuai lebar */
+    margin-left: 50px;
+    margin-bottom: -20px;
+    margin-top: -20px;
+  }

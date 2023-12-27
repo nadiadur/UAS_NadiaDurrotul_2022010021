@@ -92,7 +92,7 @@ include('includes/header.php');
                                             rows="4"><?= $post_row['meta_description'] ?></textarea>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="">Meta Keyword</label>
+                                        <label for="">Harga</label>
                                         <textarea name="meta_keyword" required class="form-control"
                                             rows="4"><?= $post_row['meta_keyword'] ?></textarea>
                                     </div>

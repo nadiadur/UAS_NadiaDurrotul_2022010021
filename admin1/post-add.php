@@ -77,7 +77,7 @@ include('includes/header.php');
                             <textarea name="meta_description" required class="form-control" rows="4"></textarea>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="">Meta Keyword</label>
+                            <label for="">Harga</label>
                             <textarea name="meta_keyword" required class="form-control" rows="4"></textarea>
                         </div>
                         <div class="col-md-6 mb-3">

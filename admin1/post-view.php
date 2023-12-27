@@ -22,6 +22,7 @@ include('includes/header.php');
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Category</th>
+                                <th>Harga</th>
                                 <th>Image</th>
                                 <th>Status</th>
                                 <th>Edit</th>
@@ -41,6 +42,8 @@ include('includes/header.php');
                                             <td><?=$post['id']?></td>
                                             <td><?=$post['name']?></td>
                                             <td><?=$post['cname']?></td>
+                                            <td>Rp.<?= number_format( $post['meta_keyword'], 2, ",", "."); ?></td>
+
                                            <td> <img src="../uploads/posts/<?= $post['image'] ?>" width="60" height="60px"  /></td>
     
                                             <td>

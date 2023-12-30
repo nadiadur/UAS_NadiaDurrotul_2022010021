@@ -318,7 +318,7 @@ include('includes/navbar.php');
                                     $row = mysqli_fetch_assoc($result);
                                     $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
                                     ?>
-                                    <a href="#"><img src="<?php echo $gambar; ?>"
+                                    <a href="serum.php"><img src="<?php echo $gambar; ?>"
                                             class="rounded-circle img-fluid border"></a>
                                     <?php
                                 } else {
@@ -329,7 +329,7 @@ include('includes/navbar.php');
                                 mysqli_close($con);
                                 ?>
                                 <h5 class="text-center mt-3 mb-3">Serum</h5>
-                                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                                <p class="text-center"><a class="btn btn-success" href="serum.php">Go Shop</a></p>
                             </div>
                             <div class="col-12 col-md-4 p-5 mt-3">
                                 <?php
@@ -349,7 +349,7 @@ include('includes/navbar.php');
                                     $row = mysqli_fetch_assoc($result);
                                     $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
                                     ?>
-                                    <a href="#"><img src="<?php echo $gambar; ?>"
+                                    <a href="toner.php"><img src="<?php echo $gambar; ?>"
                                             class="rounded-circle img-fluid border"></a>
                                     <?php
                                 } else {
@@ -360,7 +360,7 @@ include('includes/navbar.php');
                                 mysqli_close($con);
                                 ?>
                                 <h2 class="h5 text-center mt-3 mb-3">Toner</h2>
-                                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                                <p class="text-center"><a class="btn btn-success" href="toner.php">Go Shop</a></p>
                             </div>
 
                             <div class="col-12 col-md-4 p-5 mt-3">
@@ -381,7 +381,7 @@ include('includes/navbar.php');
                                     $row = mysqli_fetch_assoc($result);
                                     $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
                                     ?>
-                                    <a href="#"><img src="<?php echo $gambar; ?>"
+                                    <a href="cream.php"><img src="<?php echo $gambar; ?>"
                                             class="rounded-circle img-fluid border"></a>
                                     <?php
                                 } else {
@@ -392,7 +392,7 @@ include('includes/navbar.php');
                                 mysqli_close($con);
                                 ?>
                                 <h2 class="h5 text-center mt-3 mb-3">Cream</h2>
-                                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+                                <p class="text-center"><a class="btn btn-success" href="cream.php">Go Shop</a></p>
                             </div>
                         </div>
                     </section>

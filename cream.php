@@ -1,13 +1,18 @@
 <?php
+
+
 session_start();
 include('includes/header.php');
 include('includes/navbar.php');
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title> About Page</title>
+    <title>Product Listing Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -32,15 +37,10 @@ https://templatemo.com/tm-559-zay-shop
 </head>
 
 <body>
-    <!-- Start Top Nav -->
-
-    <!-- Close Top Nav -->
-
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-
 
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -117,324 +117,297 @@ https://templatemo.com/tm-559-zay-shop
 
 
 
-    <section class="bg-success py-5">
-        < <div class="container">
-            <div class="row align-items-center py-5">
-                <div class="col-md-8 text-white">
-                    <h1>About Us</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <?php
-                    // Koneksi ke database
-                    $con = mysqli_connect("localhost", "root", "", "blog");
-
-                    if (!$con) {
-                        die("Koneksi gagal: " . mysqli_connect_error());
-                    }
-
-                    $id = 20; // Ganti dengan ID produk yang diinginkan
-                    $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
-                    $result = mysqli_query($con, $query);
-
-                    if (mysqli_num_rows($result) > 0) {
-                        $row = mysqli_fetch_assoc($result);
-                        ?>
-                        <div class="product-card">
-                            <?php
-                            // Tampilkan gambar
-                            echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
-                            ?>
-                            <?php
-                    } else {
-                        echo "Produk tidak ditemukan.";
-                    }
-
-                    mysqli_close($con);
-                    ?>
-                    </div>
-                </div>
-
-    </section>
-    <!-- Close Banner -->
-    <section class="bg-light">
-        <div class="container py-5">
-            <div class="row text-center py-3">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Featured Product</h1>
-                    <p>
-                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 24; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 25; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 27; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-            </div>
-        </div>
-        <div class="container py-3">
-          
-            <div class="row">
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 21; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 22; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 23; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-            </div>
-        </div>
-    </section>
-
-    <!-- Start Section -->
-    <section class="container py-5">
-        <div class="row text-center pt-5 pb-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1">Our Services</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-        </div>
+    <!-- Start Content -->
+    <div class="container py-5">
         <div class="row">
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
-                    <h2 class="h5 mt-4 text-center">Delivery Services</h2>
-                </div>
+            <div class="col-lg-3">
+                <h1 class="h2 pb-4">Categories</h1>
+
             </div>
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
-                    <h2 class="h5 mt-4 text-center">Shipping & Return</h2>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline shop-top-menu pb-3 pt-1">
+                            <li class="list-inline-item">
+                                <a class="h3 text-dark text-decoration-none mr-3" href="shop.php">All</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="h3 text-dark text-decoration-none mr-3" href="serum.php">Serum</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="h3 text-dark text-decoration-none" href="toner.php">Toner</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="h3 text-dark text-decoration-none" href="cream.php">Cream</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 pb-4">
+                        <div class="d-flex">
+                            <select class="form-control">
+                                <option>Featured</option>
+                                <option>A to Z</option>
+                                <option>Item</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+            
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <?php
+                                // Koneksi ke database
+                                $con = mysqli_connect("localhost", "root", "", "blog");
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
-                    <h2 class="h5 mt-4 text-center">Promotion</h2>
-                </div>
-            </div>
+                                if (!$con) {
+                                    die("Koneksi gagal: " . mysqli_connect_error());
+                                }
 
-            <div class="col-md-6 col-lg-3 pb-5">
-                <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
-                    <h2 class="h5 mt-4 text-center">24 Hours Service</h2>
+                                $id = 17; // Ganti dengan ID produk yang diinginkan
+                                $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
+                                $result = mysqli_query($con, $query);
+
+                                if (mysqli_num_rows($result) > 0) {
+                                    $row = mysqli_fetch_assoc($result);
+                                    ?>
+                                    <div class="product-card">
+                                        <?php
+                                        // Tampilkan gambar
+                                        echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
+                                        ?>
+
+                                        <div
+                                            class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                            <ul class="list-unstyled">
+                                                <li><a class="btn btn-success text-white" href="shop-single.php"><i
+                                                            class="far fa-heart"></i></a></li>
+                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                            class="far fa-eye"></i></a></li>
+                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                            class="fas fa-cart-plus"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                            </div>
+                            <div class="card-body">
+                            <h5 class="product-title" style="font-size: 18px; font-weight: bold; color: #333;">
+                                        <?php echo $row['name']; ?>
+                                    </h5>
+                                    <p class="product-price" style="font-size: 18px; font-weight: bold; color: #333;">
+                                        <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                    </p>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li class="pt-2">
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                                } else {
+                                    echo "Produk tidak ditemukan.";
+                                }
+
+                                mysqli_close($con);
+                                ?>
+                                <!-- Akhir loop untuk menampilkan produk -->
+
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <?php
+                                // Koneksi ke database
+                                $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                if (!$con) {
+                                    die("Koneksi gagal: " . mysqli_connect_error());
+                                }
+
+                                $id = 18; // Ganti dengan ID produk yang diinginkan
+                                $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
+                                $result = mysqli_query($con, $query);
+
+                                if (mysqli_num_rows($result) > 0) {
+                                    $row = mysqli_fetch_assoc($result);
+                                    ?>
+                                    <div class="product-card">
+                                        <?php
+                                        // Tampilkan gambar
+                                        echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
+                                        ?>
+                                    
+
+                                        <div
+                                            class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                            <ul class="list-unstyled">
+                                                <li><a class="btn btn-success text-white" href="shop-single.php"><i
+                                                            class="far fa-heart"></i></a></li>
+                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                            class="far fa-eye"></i></a></li>
+                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                            class="fas fa-cart-plus"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  
+                            </div>
+                            <div class="card-body">
+                            <h5 class="product-title" style="font-size: 18px; font-weight: bold; color: #333;">
+                                        <?php echo $row['name']; ?>
+                                    </h5>
+                                    <p class="product-price" style="font-size: 18px; font-weight: bold; color: #333;">
+                                        <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                    </p>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li class="pt-2">
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                                } else {
+                                    echo "Produk tidak ditemukan.";
+                                }
+
+                                mysqli_close($con);
+                                ?>
+                                <!-- Akhir loop untuk menampilkan produk -->
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <?php
+                                // Koneksi ke database
+                                $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                if (!$con) {
+                                    die("Koneksi gagal: " . mysqli_connect_error());
+                                }
+
+                                $id = 19; // Ganti dengan ID produk yang diinginkan
+                                $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
+                                $result = mysqli_query($con, $query);
+
+                                if (mysqli_num_rows($result) > 0) {
+                                    $row = mysqli_fetch_assoc($result);
+                                    ?>
+                                    <div class="product-card">
+                                        <?php
+                                        // Tampilkan gambar
+                                        echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
+                                        ?>
+
+                                        <div
+                                            class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                            <ul class="list-unstyled">
+                                                <li><a class="btn btn-success text-white" href="shop-single.php"><i
+                                                            class="far fa-heart"></i></a></li>
+                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                            class="far fa-eye"></i></a></li>
+                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                            class="fas fa-cart-plus"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                   
+                            </div>
+                            <div class="card-body">
+                            <h5 class="product-title" style="font-size: 18px; font-weight: bold; color: #333;">
+                                        <?php echo $row['name']; ?>
+                                    </h5>
+                                    <p class="product-price" style="font-size: 18px; font-weight: bold; color: #333;">
+                                        <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                    </p>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li class="pt-2">
+                                        <span
+                                            class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                                } else {
+                                    echo "Produk tidak ditemukan.";
+                                }
+
+                                mysqli_close($con);
+                                ?>
+                                <!-- Akhir loop untuk menampilkan produk -->
+
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End Section -->
+
+    </div>
+    </div>
+    <!-- End Content -->
 
     <!-- Start Brands -->
     <section class="bg-light py-5">
@@ -451,7 +424,7 @@ https://templatemo.com/tm-559-zay-shop
                     <div class="row d-flex flex-row">
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
+                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="prev">
                                 <i class="text-light fas fa-chevron-left"></i>
                             </a>
                         </div>
@@ -459,7 +432,7 @@ https://templatemo.com/tm-559-zay-shop
 
                         <!--Carousel Wrapper-->
                         <div class="col">
-                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand"
+                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example"
                                 data-bs-ride="carousel">
                                 <!--Slides-->
                                 <div class="carousel-inner product-links-wap" role="listbox">
@@ -541,7 +514,7 @@ https://templatemo.com/tm-559-zay-shop
 
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
+                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
                                 <i class="text-light fas fa-chevron-right"></i>
                             </a>
                         </div>
@@ -610,8 +583,8 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a rel="nofollow" class="text-light text-decoration-none" target="_blank"
-                                href="http://fb.com/templatemo"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+                                    class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
                             <a class="text-light text-decoration-none" target="_blank"

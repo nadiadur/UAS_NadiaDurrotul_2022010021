@@ -138,7 +138,7 @@ include('includes/navbar.php');
                                             }
 
                                             // Ambil gambar berdasarkan ID tertentu
-                                            $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
+                                            $id = 15; // Ganti dengan ID gambar yang ingin ditampilkan
                                             $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
                                             $result = mysqli_query($con, $query);
 
@@ -159,21 +159,18 @@ include('includes/navbar.php');
                                         </div>
                                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                                             <div class="text-align-left align-self-center">
-                                                <h1 class="h1 text-success "><b>Barenbliss</b></h1>
-                                                <h3 class="h2">Tiny and Perfect eCommerce Template</h3>
+                                                <h1 class="h1 text-success "><b>Innisfree</b></h1>
+                                                <h3 class="h2">innisfree No.1 Green tea</h3>
                                                 <p>
-                                                    Zay Shop is an eCommerce HTML5 CSS template with latest version of
-                                                    Bootstrap 5 (beta 1).
-                                                    This template is 100% free provided by <a rel="sponsored"
-                                                        class="text-success" href="https://templatemo.com"
-                                                        target="_blank">TemplateMo</a> website.
-                                                    Image credits go to <a rel="sponsored" class="text-success"
-                                                        href="https://stories.freepik.com/" target="_blank">Freepik
-                                                        Stories</a>,
-                                                    <a rel="sponsored" class="text-success" href="https://unsplash.com/"
-                                                        target="_blank">Unsplash</a> and
-                                                    <a rel="sponsored" class="text-success" href="https://icons8.com/"
-                                                        target="_blank">Icons 8</a>.
+                                                    'pelembab khusus' yang dibuat setelah
+                                                    mempelajari 2.401 varietas teh hijau
+                                                    - Untuk mencari 'kelembaban' yang akan mewujudkan kondisi kulit yang
+                                                    ideal, innisfree meneliti varietas teh hijau yang unik di Korea, dan
+                                                    setelah menganalisa berbagai bahan aktif akhirnya berhasil membuat
+                                                    Beauty Green Tea yang sangat kaya dengan Amino acid
+                                                    yang sangat efektif sebagai pelembab kulit.
+
+
                                                 </p>
                                             </div>
                                         </div>
@@ -243,7 +240,7 @@ include('includes/navbar.php');
                                             }
 
                                             // Ambil gambar berdasarkan ID tertentu
-                                            $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
+                                            $id = 17; // Ganti dengan ID gambar yang ingin ditampilkan
                                             $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
                                             $result = mysqli_query($con, $query);
 
@@ -278,9 +275,11 @@ include('includes/navbar.php');
                             </div>
                         </div>
                         <a class="carousel-control-prev text-decoration-none w-auto ps-3"
-                            href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+                            href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev"
+                            style="color : rgb(243, 106, 123);">
                             <i class="fas fa-chevron-left"></i>
                         </a>
+
                         <a class="carousel-control-next text-decoration-none w-auto pe-3"
                             href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
                             <i class="fas fa-chevron-right"></i>
@@ -311,7 +310,7 @@ include('includes/navbar.php');
                                 }
 
                                 // Ambil gambar berdasarkan ID tertentu
-                                $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
+                                $id = 14; // Ganti dengan ID gambar yang ingin ditampilkan
                                 $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
                                 $result = mysqli_query($con, $query);
 
@@ -329,11 +328,11 @@ include('includes/navbar.php');
                                 // Tutup koneksi database
                                 mysqli_close($con);
                                 ?>
-                                <h5 class="text-center mt-3 mb-3">Watches</h5>
+                                <h5 class="text-center mt-3 mb-3">Serum</h5>
                                 <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
                             </div>
                             <div class="col-12 col-md-4 p-5 mt-3">
-                            <?php
+                                <?php
                                 // Koneksi ke database
                                 $con = mysqli_connect("localhost", "root", "", "blog");
 
@@ -342,7 +341,7 @@ include('includes/navbar.php');
                                 }
 
                                 // Ambil gambar berdasarkan ID tertentu
-                                $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
+                                $id = 13; // Ganti dengan ID gambar yang ingin ditampilkan
                                 $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
                                 $result = mysqli_query($con, $query);
 
@@ -360,12 +359,12 @@ include('includes/navbar.php');
                                 // Tutup koneksi database
                                 mysqli_close($con);
                                 ?>
-                                <h2 class="h5 text-center mt-3 mb-3">Shoes</h2>
+                                <h2 class="h5 text-center mt-3 mb-3">Toner</h2>
                                 <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
                             </div>
 
                             <div class="col-12 col-md-4 p-5 mt-3">
-                            <?php
+                                <?php
                                 // Koneksi ke database
                                 $con = mysqli_connect("localhost", "root", "", "blog");
 
@@ -374,7 +373,7 @@ include('includes/navbar.php');
                                 }
 
                                 // Ambil gambar berdasarkan ID tertentu
-                                $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
+                                $id = 19; // Ganti dengan ID gambar yang ingin ditampilkan
                                 $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
                                 $result = mysqli_query($con, $query);
 
@@ -392,7 +391,7 @@ include('includes/navbar.php');
                                 // Tutup koneksi database
                                 mysqli_close($con);
                                 ?>
-                                <h2 class="h5 text-center mt-3 mb-3">Accessories</h2>
+                                <h2 class="h5 text-center mt-3 mb-3">Cream</h2>
                                 <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
                             </div>
                         </div>
@@ -415,33 +414,25 @@ include('includes/navbar.php');
                             <div class="row">
                                 <div class="col-12 col-md-4 mb-4">
                                     <div class="card h-100">
-                                    <?php
-                                // Koneksi ke database
-                                $con = mysqli_connect("localhost", "root", "", "blog");
+                                        <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
 
-                                if (!$con) {
-                                    die("Koneksi gagal: " . mysqli_connect_error());
-                                }
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
 
-                                // Ambil gambar berdasarkan ID tertentu
-                                $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
-                                $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                $result = mysqli_query($con, $query);
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 16; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
 
-                                if (mysqli_num_rows($result) > 0) {
-                                    $row = mysqli_fetch_assoc($result);
-                                    $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                    ?>
-                                    <a href="#"><img src="<?php echo $gambar; ?>"
-                                            class="card-img-top"></a>
-                                    <?php
-                                } else {
-                                    echo "Gambar dengan ID $id tidak ditemukan.";
-                                }
-
-                                // Tutup koneksi database
-                                mysqli_close($con);
-                                ?>
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
+                                            
                                         <div class="card-body">
                                             <ul class="list-unstyled d-flex justify-content-between">
                                                 <li>
@@ -451,47 +442,50 @@ include('includes/navbar.php');
                                                     <i class="text-muted fa fa-star"></i>
                                                     <i class="text-muted fa fa-star"></i>
                                                 </li>
-                                                <li class="text-muted text-right">$240.00</li>
-                                            </ul>
-                                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym
-                                                Weight</a>
-                                            <p class="card-text">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa
-                                                qui officia deserunt.
-                                            </p>
-                                            <p class="text-muted">Reviews (24)</p>
+                                                <li class="text-muted text-right"
+                                                        style="font-size: 18px; font-weight: bold; color: #333;">
+                                                        <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                                    </li>
+                                                </ul>
+                                                <a href="shop-single.html" class="h2 text-decoration-none text-dark"
+                                                    style="font-size: 18px; font-weight: bold; color: #333;">
+                                                    <?php echo $row['name']; ?>
+
+                                                </a>
+                                            
                                         </div>
                                     </div>
+                                    <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                 </div>
                                 <div class="col-12 col-md-4 mb-4">
                                     <div class="card h-100">
-                                    <?php
-                                // Koneksi ke database
-                                $con = mysqli_connect("localhost", "root", "", "blog");
+                                        <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
 
-                                if (!$con) {
-                                    die("Koneksi gagal: " . mysqli_connect_error());
-                                }
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
 
-                                // Ambil gambar berdasarkan ID tertentu
-                                $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
-                                $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                $result = mysqli_query($con, $query);
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 12; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
 
-                                if (mysqli_num_rows($result) > 0) {
-                                    $row = mysqli_fetch_assoc($result);
-                                    $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                    ?>
-                                    <a href="#"><img src="<?php echo $gambar; ?>"
-                                            class="card-img-top"></a>
-                                    <?php
-                                } else {
-                                    echo "Gambar dengan ID $id tidak ditemukan.";
-                                }
-
-                                // Tutup koneksi database
-                                mysqli_close($con);
-                                ?>
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
+                                            
                                         <div class="card-body">
                                             <ul class="list-unstyled d-flex justify-content-between">
                                                 <li>
@@ -501,68 +495,82 @@ include('includes/navbar.php');
                                                     <i class="text-muted fa fa-star"></i>
                                                     <i class="text-muted fa fa-star"></i>
                                                 </li>
-                                                <li class="text-muted text-right">$480.00</li>
-                                            </ul>
-                                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Cloud
-                                                Nike Shoes</a>
-                                            <p class="card-text">
-                                                Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae
-                                                pharetra sed, commodo ullamcorper.
-                                            </p>
-                                            <p class="text-muted">Reviews (48)</p>
+                                                <li class="text-muted text-right"
+                                                        style="font-size: 18px; font-weight: bold; color: #333;">
+                                                        <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                                    </li>
+                                                </ul>
+                                                <a href="shop-single.html" class="h2 text-decoration-none text-dark"
+                                                    style="font-size: 18px; font-weight: bold; color: #333;">
+                                                    <?php echo $row['name']; ?>
+
+                                                </a>
+                                           
                                         </div>
                                     </div>
+                                    <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                 </div>
                                 <div class="col-12 col-md-4 mb-4">
                                     <div class="card h-100">
-                                    <?php
-                                // Koneksi ke database
-                                $con = mysqli_connect("localhost", "root", "", "blog");
+                                        <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
 
-                                if (!$con) {
-                                    die("Koneksi gagal: " . mysqli_connect_error());
-                                }
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
 
-                                // Ambil gambar berdasarkan ID tertentu
-                                $id = 10; // Ganti dengan ID gambar yang ingin ditampilkan
-                                $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                $result = mysqli_query($con, $query);
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 18; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
 
-                                if (mysqli_num_rows($result) > 0) {
-                                    $row = mysqli_fetch_assoc($result);
-                                    $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                    ?>
-                                    <a href="#"><img src="<?php echo $gambar; ?>"
-                                            class="card-img-top"></a>
-                                    <?php
-                                } else {
-                                    echo "Gambar dengan ID $id tidak ditemukan.";
-                                }
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
 
-                                // Tutup koneksi database
-                                mysqli_close($con);
-                                ?>
-                                        <div class="card-body">
-                                            <ul class="list-unstyled d-flex justify-content-between">
-                                                <li>
-                                                    <i class="text-warning fa fa-star"></i>
-                                                    <i class="text-warning fa fa-star"></i>
-                                                    <i class="text-warning fa fa-star"></i>
-                                                    <i class="text-warning fa fa-star"></i>
-                                                    <i class="text-warning fa fa-star"></i>
-                                                </li>
-                                                <li class="text-muted text-right">$360.00</li>
-                                            </ul>
-                                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Summer
-                                                Addides Shoes</a>
-                                            <p class="card-text">
-                                                Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis
-                                                diam, et scelerisque ipsum lobortis nec.
-                                            </p>
-                                            <p class="text-muted">Reviews (74)</p>
+                                            <div class="card-body">
+                                                <ul class="list-unstyled d-flex justify-content-between">
+                                                    <li>
+                                                        <i class="text-warning fa fa-star"></i>
+                                                        <i class="text-warning fa fa-star"></i>
+                                                        <i class="text-warning fa fa-star"></i>
+                                                        <i class="text-warning fa fa-star"></i>
+                                                        <i class="text-warning fa fa-star"></i>
+                                                    </li>
+                                                    <li class="text-muted text-right"
+                                                        style="font-size: 18px; font-weight: bold; color: #333;">
+                                                        <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                                    </li>
+                                                </ul>
+                                                <a href="shop-single.html" class="h2 text-decoration-none text-dark"
+                                                    style="font-size: 18px; font-weight: bold; color: #333;">
+                                                    <?php echo $row['name']; ?>
+
+                                                </a>
+                                                
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                             </div>
                         </div>
                     </section>
@@ -571,7 +579,8 @@ include('includes/navbar.php');
                             <div class="row">
 
                                 <div class="col-md-4 pt-5">
-                                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Barenbliss Shop
+                                    <h2 class="h2 text-success border-bottom pb-3 border-light logo"
+                                        style="color : rgb(243, 106, 123);">Innisfree Shop
                                     </h2>
                                     <ul class="list-unstyled text-light footer-link-list">
                                         <li>
@@ -644,14 +653,6 @@ include('includes/navbar.php');
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-auto">
-                                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
-                                            placeholder="Email address">
-                                        <div class="input-group-text btn-success text-light">Subscribe</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -660,7 +661,7 @@ include('includes/navbar.php');
                                 <div class="row pt-2">
                                     <div class="col-12">
                                         <p class="text-left text-light">
-                                            Copyright &copy; 2021 Company Name
+                                            Copyright &copy; 2023 Nadia Durrotul
 
                                         </p>
                                     </div>

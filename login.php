@@ -16,16 +16,16 @@ include('includes/navbar.php');
 <div class="awal">
 <div class="py-5" >
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" >
             <div class="col-md-5">
                 
             <?php include('message.php'); ?>
 
-               <div class="card">
-                <div class="card-header">
+               <div class="card" >
+                <div class="card-header" >
                     <h4>Login</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body" >
 
                 <form action="logincode.php" method="POST">
                     <div class="form-group mb-3">

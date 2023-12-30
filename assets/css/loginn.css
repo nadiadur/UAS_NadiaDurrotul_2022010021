@@ -1,0 +1,21 @@
+
+.card-header {
+    color:  #4F6F52;
+    background-color:#88AB8E;
+}
+.card {
+    background-color:  #4F6F52; /* Ganti dengan warna yang diinginkan */
+    color: white; /* Ganti dengan warna teks yang kontras */
+    /* Atur properti lain sesuai kebutuhan */
+    padding: 20px;
+    border-radius: 5px;
+}
+.btn {
+    background-color: #88AB8E;
+    border-color: #3d443e;
+}
+.btn:hover {
+    background-color: rgb(65, 61, 61);
+    border-color: #4F6F52;
+}
+

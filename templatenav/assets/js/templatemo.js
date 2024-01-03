@@ -30,9 +30,9 @@ $(document).ready(function() {
       return false;
     });
     $('#btn-minus').click(function(){
-      var val = $("#var-value").html();
+      var val = $("#var-value").php();
       val = (val=='1')?val:val-1;
-      $("#var-value").html(val);
+      $("#var-value").php(val);
       $("#product-quanity").val(val);
       return false;
     });
@@ -44,7 +44,7 @@ $(document).ready(function() {
       return false;
     });
     $('.btn-size').click(function(){
-      var this_val = $(this).html();
+      var this_val = $(this).php();
       $("#product-size").val(this_val);
       $(".btn-size").removeClass('btn-secondary');
       $(".btn-size").addClass('btn-success');

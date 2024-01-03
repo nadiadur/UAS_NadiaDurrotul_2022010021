@@ -20,7 +20,7 @@ include('includes/navbar.php');
     <link rel="shortcut icon" type="image/x-icon" href="templatenav/assets/img/favicon.ico">
 
     <link rel="stylesheet" href="templatenav/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="templatenav/assets/css/templatemo.css">
+    <link rel="stylesheet" href="templatenav/assets/css/templatem.css">
     <link rel="stylesheet" href="templatenav/assets/css/custom.css">
 
     <!-- Load fonts style after rendering the layout styles -->
@@ -996,17 +996,17 @@ https://templatemo.com/tm-559-zay-shop
         <div class="container my-4">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Brands</h1>
+                    <h1 class="h1">Our Platform</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        Lorem ipsum dolor sit amet.
+                    Temukan keberagaman di setiap langkah! Jelajahi platform-platform kami yang menghadirkan kemudahan, 
+                    dan pilihan terbaik.
                     </p>
                 </div>
                 <div class="col-lg-9 m-auto tempaltemo-carousel">
                     <div class="row d-flex flex-row">
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="prev">
+                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
                                 <i class="text-light fas fa-chevron-left"></i>
                             </a>
                         </div>
@@ -1014,7 +1014,7 @@ https://templatemo.com/tm-559-zay-shop
 
                         <!--Carousel Wrapper-->
                         <div class="col">
-                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example"
+                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand"
                                 data-bs-ride="carousel">
                                 <!--Slides-->
                                 <div class="carousel-inner product-links-wap" role="listbox">
@@ -1023,20 +1023,116 @@ https://templatemo.com/tm-559-zay-shop
                                     <div class="carousel-item active">
                                         <div class="row">
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_01.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 28; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://shopee.co.id/innisfreeofficialshop" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_02.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 32; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://www.sociolla.com/316_innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_03.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 30; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://www.tokopedia.com/innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 31; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://www.tiktok.com/@innisfreeindonesia" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                         </div>
                                     </div>
@@ -1044,48 +1140,124 @@ https://templatemo.com/tm-559-zay-shop
 
                                     <!--Second slide-->
                                     <div class="carousel-item">
-                                        <div class="row">
+                                    <div class="row">
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_01.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 28; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://shopee.co.id/innisfreeofficialshop" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_02.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 32; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://www.sociolla.com/316_innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_03.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 30; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://www.tokopedia.com/innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_04.png" alt="Brand Logo"></a>
+                                            <?php
+                                        // Koneksi ke database
+                                        $con = mysqli_connect("localhost", "root", "", "blog");
+
+                                        if (!$con) {
+                                            die("Koneksi gagal: " . mysqli_connect_error());
+                                        }
+
+                                        // Ambil gambar berdasarkan ID tertentu
+                                        $id = 31; // Ganti dengan ID gambar yang ingin ditampilkan
+                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
+                                        $result = mysqli_query($con, $query);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            $row = mysqli_fetch_assoc($result);
+                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
+                                            ?>
+                                            <a href="https://www.tiktok.com/@innisfreeindonesia" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
+                                            <?php
+                                        } else {
+                                            echo "Gambar dengan ID $id tidak ditemukan.";
+                                        }
+
+                                        // Tutup koneksi database
+                                        mysqli_close($con);
+                                        ?>
                                             </div>
                                         </div>
                                     </div>
                                     <!--End Second slide-->
 
-                                    <!--Third slide-->
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_01.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_02.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_03.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img"
-                                                        src="templatenav/assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <!--End Third slide-->
 
                                 </div>
@@ -1096,7 +1268,7 @@ https://templatemo.com/tm-559-zay-shop
 
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
+                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
                                 <i class="text-light fas fa-chevron-right"></i>
                             </a>
                         </div>
@@ -1111,110 +1283,99 @@ https://templatemo.com/tm-559-zay-shop
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
-        <div class="container">
-            <div class="row">
+                        <div class="container">
+                            <div class="row">
 
-                <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
-                    <ul class="list-unstyled text-light footer-link-list">
-                        <li>
-                            <i class="fas fa-map-marker-alt fa-fw"></i>
-                            123 Consectetur at ligula 10660
-                        </li>
-                        <li>
-                            <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
-                        </li>
-                        <li>
-                            <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
-                        </li>
-                    </ul>
-                </div>
+                                <div class="col-md-4 pt-5">
+                                    <h2 class="h2 text-success border-bottom pb-3 border-light logo"
+                                        style="color : rgb(243, 106, 123);">Innisfree Shop
+                                    </h2>
+                                    <ul class="list-unstyled text-light footer-link-list">
+                                        <li>
+                                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                                            28 Jalan Letnan Jenderal S. Parman <br>11470 Jakarta Jakarta
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-phone fa-fw"></i>
+                                            <a class="text-decoration-none">+62 21 29508758</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-envelope fa-fw"></i>
+                                            <a class="text-decoration-none"
+                                                >cs_id@innisfree.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
-                    <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Luxury</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                        <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                        <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
-                    </ul>
-                </div>
+                                <div class="col-md-4 pt-5">
+                                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                                    <ul class="list-unstyled text-light footer-link-list">
+                                        <li><a class="text-decoration-none" href="serum.php">Serum</a></li>
+                                        <li><a class="text-decoration-none" href="toner.php">Toner</a></li>
+                                        <li><a class="text-decoration-none" href="cream.php">Cream</a></li>
+                                    </ul>
+                                </div>
 
-                <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
-                    <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Home</a></li>
-                        <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
-                    </ul>
-                </div>
+                                <div class="col-md-4 pt-5">
+                                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                                    <ul class="list-unstyled text-light footer-link-list">
+                                        <li><a class="text-decoration-none" href="index.php">Home</a></li>
+                                        <li><a class="text-decoration-none" href="about.php">About Us</a></li>
+                                        <li><a class="text-decoration-none" href="contact.php">Contact</a></li>
+                                    </ul>
+                                </div>
 
-            </div>
+                            </div>
 
-            <div class="row text-light mb-4">
-                <div class="col-12 mb-3">
-                    <div class="w-100 my-3 border-top border-light"></div>
-                </div>
-                <div class="col-auto me-auto">
-                    <ul class="list-inline text-left footer-icons">
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
-                                    class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank"
-                                href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
-                                    class="fab fa-twitter fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank"
-                                href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
-                            placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <div class="row text-light mb-4">
+                                <div class="col-12 mb-3">
+                                    <div class="w-100 my-3 border-top border-light"></div>
+                                </div>
+                                <div class="col-auto me-auto">
+                                    <ul class="list-inline text-left footer-icons">
+                                        <li class="list-inline-item border border-light rounded-circle text-center">
+                                            <a class="text-light text-decoration-none" target="_blank"
+                                                href="https://shopee.co.id/innisfreeofficialshop"><i
+                                                    class="fa fa-shopping-cart fa-lg fa-fw"></i></a>
+                                        </li>
+                                        <li class="list-inline-item border border-light rounded-circle text-center">
+                                            <a class="text-light text-decoration-none" target="_blank"
+                                                href="https://www.instagram.com/innisfreeofficial/"><i
+                                                    class="fab fa-instagram fa-lg fa-fw"></i></a>
+                                        </li>
+                                        <li class="list-inline-item border border-light rounded-circle text-center">
+                                            <a class="text-light text-decoration-none" target="_blank"
+                                                href="https://twitter.com/innisfree_kr"><i
+                                                    class="fab fa-twitter fa-lg fa-fw"></i></a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="w-100 bg-black py-3">
-            <div class="container">
-                <div class="row pt-2">
-                    <div class="col-12">
-                        <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name
-                            |
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <div class="w-100 bg-black py-3">
+                            <div class="container">
+                                <div class="row pt-2">
+                                    <div class="col-12">
+                                        <p class="text-left text-light">
+                                            Copyright &copy; 2023 Nadia Durrotul
 
-    </footer>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </footer>
     <!-- End Footer -->
 
     <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="templatenav/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="templatenav/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="templatenav/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="templatenav/assets/js/templatemo.js"></script>
+    <script src="templatenav/assets/js/custom.js"></script>
     <!-- End Script -->
 </body>
 

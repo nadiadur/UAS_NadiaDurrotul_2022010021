@@ -36,7 +36,7 @@ a, body, div, input, label, li, p, ul {
 }
 
 .text-success {
-    color: rgb(243, 106, 123)!important;
+    color: #69bb7e!important;
 }
 
 .text-light {
@@ -58,11 +58,11 @@ a, body, div, input, label, li, p, ul {
 
 .bg-success,
 .btn-success {
-    background-color:  rgb(243, 106, 123)e!important;
+    background-color: #69bb7e!important;
 }
 
 .btn-success {
-    border-color: rgb(243, 106, 123)!important;
+    border-color:#69bb7e!important;
 }
 
 /* Pagination Styles */
@@ -116,7 +116,7 @@ a, body, div, input, label, li, p, ul {
 }
 
 .product-wap .product-color-dot.color-dot-green {
-    background: rgb(243, 106, 123);
+    background: #69bb7e;
 }
 
 /* Card Overlay */
@@ -164,7 +164,7 @@ a, body, div, input, label, li, p, ul {
 }
 
 #tempaltemo_footer a:hover {
-    color: rgb(243, 106, 123);
+    color:#69bb7e;
 }
 
 #tempaltemo_footer ul.footer-link-list li {

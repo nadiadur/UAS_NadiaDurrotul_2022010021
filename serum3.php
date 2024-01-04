@@ -134,7 +134,7 @@ https://templatemo.com/tm-559-zay-shop
                         }
 
                         // Ambil gambar berdasarkan ID tertentu
-                        $id = 13; // Ganti dengan ID gambar yang ingin ditampilkan
+                        $id = 16; // Ganti dengan ID gambar yang ingin ditampilkan
                         $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
                         $result = mysqli_query($con, $query);
 
@@ -230,7 +230,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 11; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -248,7 +248,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                            <li><a class="btn btn-success text-white mt-2" href="toner2.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -309,7 +309,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 12; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -327,87 +327,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
-                                                        class="far fa-eye"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
-                                                        class="fas fa-cart-plus"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card-body">
-                                <h5 class="product-title" style="font-size: 18px; font-weight: bold; color: #333;">
-                                    <?php echo $row['name']; ?>
-                                </h5>
-                                <p class="product-price" style="font-size: 18px; font-weight: bold; color: #333;">
-                                    <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
-
-                                </p>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                            } else {
-                                echo "Produk tidak ditemukan.";
-                            }
-
-                            mysqli_close($con);
-                            ?>
-
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <?php
-                            // Koneksi ke database
-                            $con = mysqli_connect("localhost", "root", "", "blog");
-
-                            if (!$con) {
-                                die("Koneksi gagal: " . mysqli_connect_error());
-                            }
-
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
-                            $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
-                            $result = mysqli_query($con, $query);
-
-                            if (mysqli_num_rows($result) > 0) {
-                                $row = mysqli_fetch_assoc($result);
-                                ?>
-                                <div class="product-card">
-                                    <?php
-                                    // Tampilkan gambar
-                                    echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
-                                    ?>
-
-                                    <div
-                                        class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                        <ul class="list-unstyled">
-                                            <li><a class="btn btn-success text-white" href="shop-single.php"><i
-                                                        class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                            <li><a class="btn btn-success text-white mt-2" href="toner3.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -469,7 +389,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 13; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -487,86 +407,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
-                                                        class="far fa-eye"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
-                                                        class="fas fa-cart-plus"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card-body">
-                                <h5 class="product-title" style="font-size: 18px; font-weight: bold; color: #333;">
-                                    <?php echo $row['name']; ?>
-                                </h5>
-                                <p class="product-price" style="font-size: 18px; font-weight: bold; color: #333;">
-                                    <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
-
-                                </p>
-                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                    <li class="pt-2">
-                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
-                                        <span
-                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                            } else {
-                                echo "Produk tidak ditemukan.";
-                            }
-
-                            mysqli_close($con);
-                            ?>
-
-                <div class="p-2 pb-3">
-                    <div class="product-wap card rounded-0">
-                        <div class="card rounded-0">
-                            <?php
-                            // Koneksi ke database
-                            $con = mysqli_connect("localhost", "root", "", "blog");
-
-                            if (!$con) {
-                                die("Koneksi gagal: " . mysqli_connect_error());
-                            }
-
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
-                            $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
-                            $result = mysqli_query($con, $query);
-
-                            if (mysqli_num_rows($result) > 0) {
-                                $row = mysqli_fetch_assoc($result);
-                                ?>
-                                <div class="product-card">
-                                    <?php
-                                    // Tampilkan gambar
-                                    echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
-                                    ?>
-
-                                    <div
-                                        class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                        <ul class="list-unstyled">
-                                            <li><a class="btn btn-success text-white" href="shop-single.php"><i
-                                                        class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                            <li><a class="btn btn-success text-white mt-2" href="toner4.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -628,7 +469,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 14; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -646,7 +487,86 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
+                                            <li><a class="btn btn-success text-white mt-2" href="serum1.php"><i
+                                                        class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                        class="fas fa-cart-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <h5 class="product-title" style="font-size: 18px; font-weight: bold; color: #333;">
+                                    <?php echo $row['name']; ?>
+                                </h5>
+                                <p class="product-price" style="font-size: 18px; font-weight: bold; color: #333;">
+                                    <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                </p>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                            } else {
+                                echo "Produk tidak ditemukan.";
+                            }
+
+                            mysqli_close($con);
+                            ?>
+
+                <div class="p-2 pb-3">
+                    <div class="product-wap card rounded-0">
+                        <div class="card rounded-0">
+                            <?php
+                            // Koneksi ke database
+                            $con = mysqli_connect("localhost", "root", "", "blog");
+
+                            if (!$con) {
+                                die("Koneksi gagal: " . mysqli_connect_error());
+                            }
+
+                            $id = 15; // Ganti dengan ID produk yang diinginkan
+                            $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
+                            $result = mysqli_query($con, $query);
+
+                            if (mysqli_num_rows($result) > 0) {
+                                $row = mysqli_fetch_assoc($result);
+                                ?>
+                                <div class="product-card">
+                                    <?php
+                                    // Tampilkan gambar
+                                    echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
+                                    ?>
+
+                                    <div
+                                        class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-success text-white" href="shop-single.php"><i
+                                                        class="far fa-heart"></i></a></li>
+                                            <li><a class="btn btn-success text-white mt-2" href="serum2.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -708,7 +628,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 16; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -726,7 +646,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                            <li><a class="btn btn-success text-white mt-2" href="serum3.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -788,7 +708,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 17; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -806,7 +726,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                            <li><a class="btn btn-success text-white mt-2" href="cream1.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -868,7 +788,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 18; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -886,7 +806,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                            <li><a class="btn btn-success text-white mt-2" href="cream2.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -948,7 +868,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 19; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -966,7 +886,7 @@ https://templatemo.com/tm-559-zay-shop
                                         <ul class="list-unstyled">
                                             <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                         class="far fa-heart"></i></a></li>
-                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                            <li><a class="btn btn-success text-white mt-2" href="cream3.php"><i
                                                         class="far fa-eye"></i></a></li>
                                             <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                         class="fas fa-cart-plus"></i></a></li>
@@ -1028,7 +948,7 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 11; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 
@@ -1108,7 +1028,87 @@ https://templatemo.com/tm-559-zay-shop
                                 die("Koneksi gagal: " . mysqli_connect_error());
                             }
 
-                            $id = 10; // Ganti dengan ID produk yang diinginkan
+                            $id = 12; // Ganti dengan ID produk yang diinginkan
+                            $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
+                            $result = mysqli_query($con, $query);
+
+                            if (mysqli_num_rows($result) > 0) {
+                                $row = mysqli_fetch_assoc($result);
+                                ?>
+                                <div class="product-card">
+                                    <?php
+                                    // Tampilkan gambar
+                                    echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
+                                    ?>
+
+                                    <div
+                                        class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-success text-white" href="shop-single.php"><i
+                                                        class="far fa-heart"></i></a></li>
+                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                        class="far fa-eye"></i></a></li>
+                                            <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                        class="fas fa-cart-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <h5 class="product-title" style="font-size: 18px; font-weight: bold; color: #333;">
+                                    <?php echo $row['name']; ?>
+                                </h5>
+                                <p class="product-price" style="font-size: 18px; font-weight: bold; color: #333;">
+                                    <?php echo 'Rp. ' . number_format($row['meta_keyword'], 0, ',', '.') . ',00'; ?>
+
+                                </p>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span
+                                            class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-warning fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                        <i class="text-muted fa fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                            } else {
+                                echo "Produk tidak ditemukan.";
+                            }
+
+                            mysqli_close($con);
+                            ?>
+
+
+                <div class="p-2 pb-3">
+                    <div class="product-wap card rounded-0">
+                        <div class="card rounded-0">
+                            <?php
+                            // Koneksi ke database
+                            $con = mysqli_connect("localhost", "root", "", "blog");
+
+                            if (!$con) {
+                                die("Koneksi gagal: " . mysqli_connect_error());
+                            }
+
+                            $id = 13; // Ganti dengan ID produk yang diinginkan
                             $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
                             $result = mysqli_query($con, $query);
 

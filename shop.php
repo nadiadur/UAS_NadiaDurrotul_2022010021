@@ -184,7 +184,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="toner1.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -270,7 +270,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="toner2.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -353,7 +353,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="toner3.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -437,7 +437,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="toner4.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -520,7 +520,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="serum1.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -603,7 +603,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="serum2.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -685,7 +685,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="serum3.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -767,7 +767,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="cream1.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -850,7 +850,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="cream2.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>
@@ -931,7 +931,7 @@ https://templatemo.com/tm-559-zay-shop
                                             <ul class="list-unstyled">
                                                 <li><a class="btn btn-success text-white" href="shop-single.php"><i
                                                             class="far fa-heart"></i></a></li>
-                                                <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
+                                                <li><a class="btn btn-success text-white mt-2" href="cream3.php"><i
                                                             class="far fa-eye"></i></a></li>
                                                 <li><a class="btn btn-success text-white mt-2" href="shop-single.php"><i
                                                             class="fas fa-cart-plus"></i></a></li>

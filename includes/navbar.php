@@ -1,40 +1,111 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-  <a class="navbar-brand" href="index.php">
-            <img src="assets/img/in.png" alt="ntlogo" >
+<nav class="navbar navbar-expand-lg navbar-light shadow justify-content-end">
+    <div class="container">
+        <a class="navbar-brand" href="index.php">
+            <img src="assets/img/in.png" alt="ntlogo">
         </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        
-        <?php if(isset($_SESSION['auth_user'])) : ?>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <?=  $_SESSION['auth_user']['user_name']?>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">My Profile</a></li>
-            <li>
-          <form action="allcode.php" method="POST">
-            <button type="submit" name="logout.btn" class="dropdown-item">Logout</button>
-          </form>
-          </li>
-           
-          </ul>
-        </li>
-        <?php else : ?>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="register.php">Register</a>
-        </li>
-        <?php endif; ?>
-      </ul>
-     
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container d-flex justify-content-between align-items-center ml-lg-9">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex align-items-center justify-content-between">
+
+                        <li class="nav-item">
+                            <a class="nav-link mr-2" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-2" href="about.php">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-2" href="shop.php">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-2" href="contact.php">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <?php if (isset($_SESSION['auth_user'])): ?>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?= $_SESSION['auth_user']['user_name'] ?>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <form action="allcode.php" method="POST">
+                                <button type="submit" name="logout_btn" class="dropdown-item">Logout</button>
+                            </form>
+                        </div>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link sr-only text-hide" href="login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link sr-only text-hide" href="register.php">Register</a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+        <div class="navbar align-self-center d-flex">
+            <?php
+            if (!isset($_SESSION['user'])) {
+                ?>
+                <a class="nav-icon position-relative text-decoration-none mr-10" href="keranjang.php">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-10"></i>
+                    <?php
+                    if (isset($_SESSION['kd_cs'])) {
+                        $kode_cs = $_SESSION['kd_cs'];
+                        $cek = mysqli_query($conn, "SELECT kode_produk from keranjang where kode_customer = '$kode_cs'");
+                        $value = mysqli_num_rows($cek);
+                        ?>
+                        <span class="position-absolute top-0 left-10 translate-middle badge rounded-pill bg-light text-dark">
+                            <?= $value ?>
+                        </span>
+                        <?php
+                    } else {
+                        ?>
+                        <span class="position-absolute top-0 left-7 translate-middle badge rounded-pill bg-light text-dark">
+                            0
+                        </span>
+                    <?php } ?>
+                </a>
+                <?php
+            }
+            ?>
+
+
+        </div>
+
+        </div>
+        <a class="nav-icon position-relative text-decoration-none mr-6 ml-8" href="login.php">
+            <i class="fa fa-fw fa-user text-dark mr-10"></i>
+        </a>
+
+       
+
+  
+      
+
     </div>
-  </div>
+ 
+
 </nav>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

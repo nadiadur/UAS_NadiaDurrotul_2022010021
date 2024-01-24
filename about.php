@@ -1,8 +1,26 @@
 <?php
+require("admin1/config/dbcon.php");
+
 session_start();
+$result = mysqli_query($con, "SELECT * FROM posts");
+$rows_up_3 = [];
+$rows_up_1 = [];
+
+
+while ($row = mysqli_fetch_assoc($result)) {
+    if ($row['up'] == 3) {
+        $rows_up_3[] = $row;
+    } elseif ($row['up'] == 1) {
+        $rows_up_1[] = $row;
+    } 
+}
+?>
+
+<?php
 include('includes/header.php');
 include('includes/navbar.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,37 +93,16 @@ https://templatemo.com/tm-559-zay-shop
                     sambil mempertahankan keasriannya
                     </p>
                 </div>
-                <div class="col-md-4">
-                    <?php
-                    // Koneksi ke database
-                    $con = mysqli_connect("localhost", "root", "", "blog");
-
-                    if (!$con) {
-                        die("Koneksi gagal: " . mysqli_connect_error());
-                    }
-
-                    $id = 20; // Ganti dengan ID produk yang diinginkan
-                    $query = "SELECT * FROM posts WHERE id = $id"; // Mengambil produk berdasarkan ID tertentu
-                    $result = mysqli_query($con, $query);
-
-                    if (mysqli_num_rows($result) > 0) {
-                        $row = mysqli_fetch_assoc($result);
-                        ?>
-                        <div class="product-card">
-                            <?php
-                            // Tampilkan gambar
-                            echo '<img src="uploads/posts/' . $row['image'] . '" class="card-img img-fluid rounded-0" alt="' . $row['name'] . '">';
-                            ?>
-                            <?php
-                    } else {
-                        echo "Produk tidak ditemukan.";
-                    }
-
-                    mysqli_close($con);
-                    ?>
+            
+                    <div class="col-md-4">
+                        <?php foreach ($rows_up_3 as $post): ?>
+                            <!-- Display images with up 3 -->
+                            <div class="product-card">
+                                <img src="uploads/posts/<?= $post['image']; ?>" class="card-img img-fluid rounded-0">
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                </div>
-
+                  
     </section>
     <!-- Close Banner -->
     <section class="bg-light">
@@ -120,223 +117,23 @@ https://templatemo.com/tm-559-zay-shop
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 24; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
+    <?php foreach ($rows_up_1 as $post): ?>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <a><img src="uploads/posts/<?= $post['image']; ?>" class="card-img-top"></a>
+                <div class="card-body">
 
 
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 25; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 27; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
             </div>
         </div>
-        <div class="container py-3">
-          
-            <div class="row">
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 21; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
+    <?php endforeach; ?>
+</div>
 
 
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
 
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 22; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                        <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <?php
-                        // Koneksi ke database
-                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                        if (!$con) {
-                            die("Koneksi gagal: " . mysqli_connect_error());
-                        }
-
-                        // Ambil gambar berdasarkan ID tertentu
-                        $id = 23; // Ganti dengan ID gambar yang ingin ditampilkan
-                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                        $result = mysqli_query($con, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            $row = mysqli_fetch_assoc($result);
-                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                            ?>
-                            <a href="#"><img src="<?php echo $gambar; ?>" class="card-img-top"></a>
-
-                            <div class="card-body">
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                        } else {
-                            echo "Gambar dengan ID $id tidak ditemukan.";
-                        }
-
-                        // Tutup koneksi database
-                        mysqli_close($con);
-                        ?>
-            </div>
         </div>
+       
     </section>
 
     <!-- Start Section -->
@@ -382,296 +179,7 @@ https://templatemo.com/tm-559-zay-shop
     </section>
     <!-- End Section -->
 
-    <!-- Start Brands -->
-    <section class="bg-light py-5">
-        <div class="container my-4">
-            <div class="row text-center py-3">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Platform</h1>
-                    <p>
-                    Temukan keberagaman di setiap langkah! Jelajahi platform-platform kami yang menghadirkan kemudahan, 
-                    dan pilihan terbaik.
-                    </p>
-                </div>
-                <div class="col-lg-9 m-auto tempaltemo-carousel">
-                    <div class="row d-flex flex-row">
-                        <!--Controls-->
-                        <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
-                                <i class="text-light fas fa-chevron-left"></i>
-                            </a>
-                        </div>
-                        <!--End Controls-->
-
-                        <!--Carousel Wrapper-->
-                        <div class="col">
-                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand"
-                                data-bs-ride="carousel">
-                                <!--Slides-->
-                                <div class="carousel-inner product-links-wap" role="listbox">
-
-                                    <!--First slide-->
-                                    <div class="carousel-item active">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 28; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://shopee.co.id/innisfreeofficialshop" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 32; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://www.sociolla.com/316_innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 30; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://www.tokopedia.com/innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 31; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://www.tiktok.com/@innisfreeindonesia" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End First slide-->
-
-                                    <!--Second slide-->
-                                    <div class="carousel-item">
-                                    <div class="row">
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 28; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://shopee.co.id/innisfreeofficialshop" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 32; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://www.sociolla.com/316_innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 30; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://www.tokopedia.com/innisfree" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                            <?php
-                                        // Koneksi ke database
-                                        $con = mysqli_connect("localhost", "root", "", "blog");
-
-                                        if (!$con) {
-                                            die("Koneksi gagal: " . mysqli_connect_error());
-                                        }
-
-                                        // Ambil gambar berdasarkan ID tertentu
-                                        $id = 31; // Ganti dengan ID gambar yang ingin ditampilkan
-                                        $query = "SELECT * FROM posts WHERE id = $id"; // Ubah nama_tabel dan image_path sesuai dengan struktur tabel Anda
-                                        $result = mysqli_query($con, $query);
-
-                                        if (mysqli_num_rows($result) > 0) {
-                                            $row = mysqli_fetch_assoc($result);
-                                            $gambar = 'uploads/posts/' . $row['image']; // Sambungkan path ke folder uploads dengan nama file gambar
-                                            ?>
-                                            <a href="https://www.tiktok.com/@innisfreeindonesia" target="_blank"><img src="<?php echo $gambar; ?>" class="img-fluid brand-img" alt="Brand Logo" style="width: 100%; height: auto;"></a>
-                                            <?php
-                                        } else {
-                                            echo "Gambar dengan ID $id tidak ditemukan.";
-                                        }
-
-                                        // Tutup koneksi database
-                                        mysqli_close($con);
-                                        ?>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End Second slide-->
-
-                                    
-                                    <!--End Third slide-->
-
-                                </div>
-                                <!--End Slides-->
-                            </div>
-                        </div>
-                        <!--End Carousel Wrapper-->
-
-                        <!--Controls-->
-                        <div class="col-1 align-self-center">
-                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
-                                <i class="text-light fas fa-chevron-right"></i>
-                            </a>
-                        </div>
-                        <!--End Controls-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Brands-->
-
-
+   
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
                         <div class="container">

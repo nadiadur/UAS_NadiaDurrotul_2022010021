@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light shadow justify-content-end">
     <div class="container">
         <a class="navbar-brand" href="index.php">
@@ -62,39 +63,20 @@
             </ul>
         </div>
         <div class="navbar align-self-center d-flex">
-            <?php
-            if (!isset($_SESSION['user'])) {
-                ?>
-                <a class="nav-icon position-relative text-decoration-none mr-10" href="keranjang.php">
-                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-10"></i>
-                    <?php
-                    if (isset($_SESSION['kd_cs'])) {
-                        $kode_cs = $_SESSION['kd_cs'];
-                        $cek = mysqli_query($conn, "SELECT kode_produk from keranjang where kode_customer = '$kode_cs'");
-                        $value = mysqli_num_rows($cek);
-                        ?>
-                        <span class="position-absolute top-0 left-10 translate-middle badge rounded-pill bg-light text-dark">
-                            <?= $value ?>
-                        </span>
-                        <?php
-                    } else {
-                        ?>
-                        <span class="position-absolute top-0 left-7 translate-middle badge rounded-pill bg-light text-dark">
-                            0
-                        </span>
-                    <?php } ?>
-                </a>
-                <?php
-            }
-            ?>
+        <a class="nav-icon position-relative text-decoration-none" href="cart.php">
+    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?= isset($_SESSION['pemesanan']) ? count($_SESSION['pemesanan']) : 0; ?></span>
+</a>
 
+              
 
         </div>
 
         </div>
+        
         <a class="nav-icon position-relative text-decoration-none mr-6 ml-8" href="login.php">
-            <i class="fa fa-fw fa-user text-dark mr-10"></i>
-        </a>
+        <i class="fa fa-fw fa-user text-dark mr-10"></i>
+    </a>
 
        
 

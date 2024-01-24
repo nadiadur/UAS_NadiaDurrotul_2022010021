@@ -39,7 +39,7 @@ include('includes/header.php');
                                     {
                                         ?>
                                         <tr>
-                                            <td><?=$post['id']?></td>
+                                            <td><?=$post['id_produk']?></td>
                                             <td><?=$post['name']?></td>
                                             <td><?=$post['cname']?></td>
                                             <td>Rp.<?= number_format( $post['meta_keyword'], 2, ",", "."); ?></td>
@@ -51,11 +51,11 @@ include('includes/header.php');
                                                    <?= $post['status'] =='1' ? 'Hidden': 'Visible' ?>
                                                 </td>
                                                 <td>
-                                                <a href="post-edit.php?id=<?= $post['id']?>" class="btn btn-success">Edit</a>
+                                                <a href="post-edit.php?id_produk=<?= $post['id_produk']?>" class="btn btn-success">Edit</a>
                                             </td>
                                             <td>
                                                 <form action="code.php" method="POST">
-                                                <button type="submit" name="post_delete_btn" value="<?=$post['id']?>" class="btn btn-danger">Delete</button>
+                                                <button type="submit" name="post_delete_btn" value="<?=$post['id_produk']?>" class="btn btn-danger">Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

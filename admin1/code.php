@@ -6,14 +6,14 @@ if(isset($_POST['post_delete_btn']))
 {
     $post_id = $_POST['post_delete_btn'];
 
-    $check_img_query = "SELECT * FROM posts WHERE id='$post_id' LIMIT 1";
+    $check_img_query = "SELECT * FROM posts WHERE id_produk='$post_id' LIMIT 1";
     $img_res = mysqli_query($con, $check_img_query);
     $res_data = mysqli_fetch_array($img_res);
 
     $image = $res_data['image'];
 
 
-    $query = "DELETE FROM posts WHERE id='$post_id' LIMIT 1";
+    $query = "DELETE FROM posts WHERE id_produk='$post_id' LIMIT 1";
     $query_run = mysqli_query($con, $query);
 
    
@@ -28,17 +28,17 @@ if(isset($_POST['post_delete_btn']))
         }
        
         $_SESSION['message'] = "Post Delete Successfully";
-        header('Location: post-view.php?id=');
+        header('Location: post-view.php?id_produk=');
         exit(0);
     } else {
         $_SESSION['message'] = "Something Went Wrong.!";
-        header('Location: post-view.php?id=');
+        header('Location: post-view.php?id_produk=');
         exit(0);
     }
 }
 
 if (isset($_POST['post_update'])) {
-    $post_id = $_POST['post_id'];
+    $post_id = $_POST['post_id']; // Assuming you have id_produk in the form as post_id
     $category_id = $_POST['category_id'];
     $name = $_POST['name'];
     $slug = $_POST['slug'];
@@ -65,21 +65,23 @@ if (isset($_POST['post_update'])) {
 
     $status = isset($_POST['status']) ? ($_POST['status'] == 'on' ? '1' : '0') : '0';
 
+    // Updated query to use id_produk instead of id
     $query = "UPDATE posts SET category_id='$category_id', name='$name', slug='$slug', description='$description', image='$update_filename',
-        meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', status='$status' WHERE id='$post_id' ";
+        meta_title='$meta_title', meta_description='$meta_description', meta_keyword='$meta_keyword', status='$status' WHERE id_produk='$post_id' ";
 
     $query_run = mysqli_query($con, $query);
 
     if ($query_run) {
         $_SESSION['message'] = "Post Updated Successfully";
-        header('Location: post-view.php?id=' . $post_id);
+        header('Location: post-view.php?id_produk=' . $post_id);
         exit(0);
     } else {
         $_SESSION['message'] = "Something Went Wrong!";
-        header('Location: post-view.php?id=' . $post_id);
+        header('Location: post-view.php?id_produk=' . $post_id);
         exit(0);
     }
 }
+
 
 if (isset($_POST['post_add'])) {
     $category_id = $_POST['category_id'];

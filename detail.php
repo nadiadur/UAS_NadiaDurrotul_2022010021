@@ -89,19 +89,18 @@ include('includes/navbar.php');
                             </p>
                             <h6 style=" bold;  color: #333;">Manfaat:</h6>
                             <ul class="list-unstyled pb-3" style=" bold;  color: #333;">
-                                <p class="h3 py-2" style="font-size: 18px; font-weight: bold; color: #333;">
+                                <p class="h5 py-2" style="font-size: 10px; bold;  color: #333;">
                                     <?= $id_details['meta_description']; ?>
                                 </p>
                             </ul>
-                            <div class="input-group quantity mb-2" style="width: 100px;">
+                            <div class="input-group quantity mb-1" style="width: 100px;">
                                 <h6><b style=" bold;  color: #333;">Jumlah</b> <input class="form-control"
                                         id="jumlahProduk" type="number" min="1" name="jml" value="1"
                                         style="width: 100px;"></h6>
 
                             </div>
-                        </div>
-
-                        <form action="" method="GET">
+                       
+                            <form action="" method="GET">
                             <input type="hidden" name="product-title" value="<?= $id_details['name']; ?>">
                     </div>
                     <div class="row pb-3">
@@ -117,6 +116,9 @@ include('includes/navbar.php');
                             </a>
                         </div>
                         </form>
+                        </div>
+
+                    
                     </div>
                 </div>
             </div>

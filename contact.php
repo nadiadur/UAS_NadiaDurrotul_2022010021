@@ -154,32 +154,6 @@ https://templatemo.com/tm-559-zay-shop
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-9 mx-auto">
-            <form action="">
-              <div class="form">
-                <form method="post">
-              <div class="form-row">
-                <div class="col-lg-6">
-                  <input type="text" class="form-control bg-light mb-3" placeholder="Name" id="name" autocomplete="off">
-                </div>
-                <div class="col-lg-6">
-                  <input type="text" class="form-control bg-light mb-3" placeholder="Email" id="email" autocomplete="off">
-                </div>
-                <div class="col-lg-6">
-                  <input type="text" class="form-control bg-light mb-3" placeholder="Subject" id="subject" autocomplete="off">
-                </div>
-              </div>  
-               <div class="form-row">
-                <div class="col-lg-12">
-                  <textarea id="message" class="form-control bg-light" placeholder="Message" cols="30" rows="10"></textarea>
-                </div>
-               </div>
-               <button id="btn" class="btn3 my-4">Submit</button>
-            </form>
-          </form>
-          </div>
-          </div>
         </div>
 
        </div>

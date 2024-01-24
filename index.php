@@ -62,11 +62,7 @@ include('includes/navbar.php');
                             </div>
                             <form action="" method="get" class="modal-content modal-body border-0 p-0">
                                 <div class="input-group mb-2">
-                                    <input type="text" class="form-control" id="inputModalSearch" name="q"
-                                        placeholder="Search ...">
-                                    <button type="submit" class="input-group-text bg-success text-light">
-                                        <i class="fa fa-fw fa-search text-white"></i>
-                                    </button>
+                                  
                                 </div>
                             </form>
                         </div>
@@ -132,7 +128,7 @@ include('includes/navbar.php');
                                         <img src="uploads/posts/<?= $post['image']; ?>" alt="<?= $post['meta_description']; ?>"
                                             class="rounded-circle img-fluid border">
                                     </a>
-                                    <h5 class="text-center mt-3 mb-3"> <?= $post['meta_description']; ?></h5>
+                                    <h5 class="text-center mt-3 mb-3"> <?= $post['meta_title']; ?></h5>
                                     <p class="text-center"><a class="btn btn-success" href="shop.php">Go Shop</a></p>
                                 </div>
                             <?php endforeach; ?>
@@ -181,7 +177,7 @@ include('includes/navbar.php');
                                                                     style="font-size: 18px; font-weight: bold; color: #333;">
                                                                     Rp. <?= number_format($post['meta_keyword'], 2, ",", ".") ?>
                                                                 </p>
-                                                                <a href="./details.php?id_produk=<?= $post['id_produk']; ?>"
+                                                                <a <?= $post['id_produk']; ?>"
                                                                     class="h2 text-decoration-none text-dark">
                                                                     <?= $post['name']; ?>
                                                                 </a>
